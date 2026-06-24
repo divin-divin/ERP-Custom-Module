@@ -211,6 +211,17 @@ def create_testing_doc():
 
 
 
+@frappe.whitelist(allow_guest=True)
+def create_testing_doc_git():
+    test_doc = frappe.new_doc("Testing")
+
+    test_doc.test1 = "Hello git"
+    test_doc.test2 = "Frappe 5"
+    test_doc.test3 = 100
+    test_doc.test4 = frappe.utils.today()
+
+    test_doc.insert(ignore_permissions=True)
+
 
 
 
