@@ -5,6 +5,50 @@ app_description = "Custom Module"
 app_email = "dueaisamydivin@gmail.com"
 app_license = "mit"
 
+
+
+# doc_events = {
+#     "Task Allocation": {
+#         "validate": "custom_module.events.validate_task"
+#     }
+# }
+
+
+
+# scheduler_events = {
+#     "cron": {
+#         "*/5 * * * *": [
+#             "custom_module.events.create_testing_doc"
+#         ]
+#     }
+# }
+
+
+
+
+
+
+app_include_css = ["/assets/custom_module/css/custom.css"]
+
+
+
+
+
+
+
+override_whitelisted_methods = {
+    "custom_module.api.hello": "custom_module.api.new_hello"
+}
+
+
+# scheduler_events = {
+#     "cron": {
+#         "* * * * *": [
+#             "custom_module.api.create_task_allocation"
+#         ]
+#     }
+# }
+
 # Apps
 # ------------------
 
